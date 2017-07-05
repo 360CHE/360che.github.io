@@ -1,0 +1,98 @@
+.button{
+	position: absolute;
+	top:0;
+	width: 28px;
+	height: 160px;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	text-align: center;
+	line-height: 160px;
+	font-family: 'cms';
+	color: #CEDDE8;
+	font-size: 32px;
+	user-select: none;
+}
+.slide-previous{
+	.button;
+	left: -33px;
+	&:hover{
+		color: #6E97B9
+	}
+}
+.slide-next{
+	.button;
+	right: -33px;
+	&:hover{
+		color: #6E97B9
+	}
+}
+.video-show{
+	position:relative;
+	width: 1000px;
+	height:220px;
+	overflow: hidden;
+	*zoom: 1;
+	.video-list{
+		position:relative;
+		width:2000%;
+		overflow:hidden;
+		.video-slide{
+			position: relative;
+			width: 250px;
+			float: left;
+			overflow: hidden;
+			.play{
+				font-style: normal;
+				font-family: 'cms';
+				border: 2px solid #fff; 
+				border-radius: 100%; 
+				font-size: 18px;
+				color: #fff; 
+				cursor: pointer;
+				line-height: 30px; 
+				position: absolute;
+				width: 18px;
+				height: 30px;
+				padding: 0 4px 0 8px;
+				box-shadow: 0 0 1px rgba(0,0,0,0.5);
+				display: block;
+				left: 15px;
+				top: 110px;
+				z-index: 2;
+				background:rgba(0,0,0,0.3);
+				filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#4C000000', endColorstr='#4C000000');
+			}
+			a{
+				position: relative;
+				display: block;
+				img{
+					display: block;
+				}
+			}
+			.title{
+				font-size: 14px;
+				width: 240px;
+				overflow: hidden;
+				height: 20px;
+				display: block;
+				padding-top: 10px;
+				margin-bottom:5px;
+				color: #0f5489;
+				text-decoration: none;
+				&:hover{
+					color: #d60000;
+					text-decoration: underline;
+				}
+			}
+			.date{
+				width: 240px;
+				overflow: hidden;
+				display: block;
+				height: 12px;
+				line-height: 12px;
+				color: #999
+			}
+		}
+	}
+}

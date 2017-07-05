@@ -1,0 +1,512 @@
+body{
+  background-color: #fff;
+  overflow-x: hidden;
+  position: relative;
+  overflow-y: auto;
+}
+@font-face {
+  font-family: 'cms';
+  src: url('//at.alicdn.com/t/font_0h4c9hirb74d9529.eot');
+  src: url('//at.alicdn.com/t/font_0h4c9hirb74d9529.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_0h4c9hirb74d9529.woff') format('woff'),
+  url('//at.alicdn.com/t/font_0h4c9hirb74d9529.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_0h4c9hirb74d9529.svg#iconfont') format('svg');
+}
+.ad-div{
+  > div{
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+  }
+  img{
+    vertical-align: top
+  }
+}
+.wrapper{
+  margin: 0 auto;
+  width: 1000px;
+}
+// 产品库入口
+.products-entry{
+  margin-top: 10px;
+  background-color: #fff;
+  > .header{
+    height: 30px;
+    border-top: 3px solid rgb(232,232,232);
+    background-color: rgb(240,240,240);
+    .search{
+      float: right;
+      position: relative;
+      left: 0;
+      top:0;
+      &:before{
+        content: '\641c';
+        font-family: 'cms';
+        position: absolute;
+        left: 12px;
+        top:3px;
+        color: #c4c4c4;
+        font-size: 16px;
+      }
+      @import './products-entry/search.less';
+    }
+    .tabs{
+      position: relative;
+      top: -3px;
+      @import './products-entry/tabs.less';
+    }
+  }
+}
+.text-links{
+  height: 200px;
+  overflow: hidden;
+  width: 1000px;
+  zoom: 1;
+  @import './products-entry/text-links.less';
+}
+.figure-links{
+  height: 59px;
+  position: relative;
+  margin:0 auto 10px;
+  width: 1000px;
+  z-index: 10;
+  *zoom:1;
+  @import './products-entry/figure-links.less';
+}
+
+// layout
+.default-module{
+  margin-top: 10px;
+  border-top: 3px solid #0f5489;
+  border-bottom: 1px solid #e9e9e9;
+  *zoom: 1;
+  &:after{
+    content: ".";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    font-size: 0;
+  }
+  > .header{
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    a{
+      text-decoration: none;
+      &:hover{color: #d60000;}
+    }
+    .view-more{
+      float: right;
+      color: #c4c4c4;
+      &:hover{
+        text-decoration: underline;
+        color: #d60000;
+      }
+      &:after{
+        content: '\591a';
+        font-family: 'cms';
+        font-size: 12px;
+      }
+    }
+    h3{
+      font-size: 20px;
+      a{
+        color: #333
+      }
+    }
+  }
+  .row-model{
+    height: 317px;
+    border-bottom: 1px solid #e9e9e9;
+  }
+  .row-model-lower{
+    height: 248px
+  }
+  .section{
+    float: left;
+    width: 776px;
+    .section-cloumn-min{
+      width: 361px;
+      float: left;
+      border-right: 1px solid #e9e9e9; 
+    }
+    .section-cloumn-max{
+      float: right;
+      width: 413px;
+      border-right: 1px solid #e9e9e9
+    }
+  }
+  .side{
+    float: right;
+    width: 224px;
+    .ad-div{
+      width: auto !important
+    }
+  }
+}
+
+.flex-container{
+  .flex-one{
+    width: 333px;
+    float: left;  
+    &:last-child{
+      width: 334px;
+    }  
+  }
+  .flex-two{
+    width: 666px;
+    float: left;
+  }
+}
+
+// 首屏
+.first-screen{
+  .ad-div > div{
+    margin: 20px 0 0 20px !important;
+  }
+  .foucs--bbs-hot{
+    height: 319px;
+    overflow: hidden;
+    border-bottom: 1px solid #e9e9e9;
+    .focus{
+      width: 340px; 
+      height: 235px; 
+      position: relative;
+      left: 0;
+      top: 0;
+      margin: 20px 0 8px 0;
+      overflow: hidden;
+      @import './first-screen/focus.less';
+    }
+    .bbs-hot{
+    @import './first-screen/bbs-hot.less';
+    }
+  }
+  .topics-hot{
+    height: 341px;
+    @import './first-screen/topics-hot.less';
+  }
+  .toutiao{
+    height: 661px;
+    overflow: hidden;
+    @import './first-screen/toutiao.less';
+  }
+  .brands{
+    height: 319px;
+    border-bottom: 1px solid #e9e9e9;
+    width: 224px; 
+    overflow: hidden;
+    @import './first-screen/brands.less';
+  }
+
+}
+
+// 卡车视频
+.recommend-videos-wrap{
+  .header .view-more{
+    line-height: 20px;
+    height: 20px;
+    margin-top: 15px;
+  }
+  .recommend-videos{
+    height: 220px;
+    position: relative;
+    @import './recommend-videos/index.less';
+  }
+} 
+
+// 第二屏
+.second-screen{
+  .side .ad-div{
+    overflow: hidden;
+    margin: 20px 0 0 20px !important;
+  }
+  .bbs-recommend{
+    @import './second-screen/bbs-recommend.less';
+  }
+  .policies-regulations{
+    @import './second-screen/policies-regulations.less';
+  }
+  .support-vehicle{
+    height: 233px;
+    @import './second-screen/support-vehicle.less';
+  }
+  .truck-news{
+    padding-left: 20px;
+    @import './second-screen/truck-news.less';
+  }
+  .price-guide{
+    padding-left: 20px;
+    position: relative;
+    @import './second-screen/price-guide.less';
+  }
+  .evaluation{
+    height: 233px;
+    padding-left: 20px;
+    @import './second-screen/evaluation.less';
+  }
+  .industry-information{
+    padding-left: 20px;
+    @import './second-screen/industry-information.less';
+  }
+}
+
+// 高清大图
+.hd-picture-news{
+  height: 320px;
+  margin-top: 10px;
+  img{
+    vertical-align: top;
+  }
+  @import './hd-picture-news/index.less';
+}
+
+.tractor,.light-truck,.cargo-truck,.dump-truck,.special-truck,.trailer{
+  height: 414px;
+}
+
+// 单标题模块
+.single-module{
+  .bbs{
+    height: 414px;
+    @import './single-module/bbs.less';
+  }
+  .news{
+    height: 414px;
+    padding-left: 20px;
+    @import './single-module/news.less';
+  }
+  .rank{
+    height: 414px;
+    padding-left: 20px;
+    @import './single-module/rank.less';
+  }
+}
+
+// 双标题模块
+.double-module{
+  .bbs{
+    height: 414px;
+    @import './double-module/bbs.less';
+  }
+  .news{
+    height: 414px;
+    padding-left: 20px;
+    @import './double-module/news.less';
+  }
+  .rank{
+    height: 414px;
+    padding-left: 20px;
+    @import './double-module/rank.less';
+  }
+}
+
+// 经销商
+.dealer{
+  .quotation{
+    height: 352px;
+    position: relative;
+    left: 0;
+    top:0;
+    @import './dealer/quotation.less';
+  }
+  .dealer-stars{
+    height: 146px;
+    margin: 10px auto;
+    position: relative;
+    @import './dealer/dealer-stars.less';
+  }
+}
+
+// 产品库图片
+.products-photos{
+  .upgrade{
+    padding-right:24px;
+    float: left;
+    width: 435px;
+    height: 393px;
+    border-right: 1px solid #e9e9e9;
+    @import './products-photos/upgrade.less';
+  }
+  .recommend{
+    float: right;
+    width: 540px;
+    @import './products-photos/recommend.less';
+  }
+}
+
+// 配件商城
+.mall-sales{
+  .header .view-more{
+    line-height: 20px;
+    height: 20px;
+    margin-top: 15px;
+  }
+  .flex-container{
+    height: 273px;
+    .flex-two{
+      .hot{
+        overflow: hidden;
+        clear: both;
+        @import './mall-sales/hot.less';
+      }
+    }
+    .flex-one{
+        @import './mall-sales/recommend.less';
+    }
+  }  
+}
+
+// 排行榜
+.ranks-all{
+  .flex-one{
+    height: 392px;
+    overflow: hidden;
+    .hot-news,.hot-poster{
+      @import './rank-all/hot-news.less';
+    }
+    .hot-poster{
+      .header{
+        padding-left: 20px;
+      }
+      .rank-con{
+        padding-left: 20px;
+      }
+    }
+    .model-focus{
+      width: 331px;
+      height: 392px;
+      border-left: 1px solid #e9e9e9;
+      border-right: 1px solid #e9e9e9;
+      @import './rank-all/model-focus.less';
+    }
+  }
+}
+
+// 友情链接&热门推荐
+.friends-link{
+  .header-link{
+    height: 35px;
+    padding-top: 15px;
+    h3{
+      height: 21px;
+      font-size: 0;
+    }
+    h3 a{
+      display: inline-block;
+      font-size: 16px;
+      line-height: 21px;
+      color: #333;
+      text-decoration: none;
+      height: 21px;
+      padding-right: 11px;
+      margin-right: 11px;
+      font-weight: 400;
+      position: relative;
+      &.border:after{
+        content: '';
+        width: 1px;
+        height: 12px;
+        position: absolute;
+        background-color: #d9d9d9;
+        top: 4px;
+        right: 0;
+      }
+      &.current{
+        color: #000;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+  .content{
+    font-size: 0;
+    padding: 10px 0;
+    border-top: 1px solid #e9e9e9;
+    display: none;
+    &.visible{display: block;}
+     @import './friends-link/index.less';
+  }
+}
+
+// 公共底部
+.global-footer{
+  height: 143px;
+  border-bottom: 0 none; 
+  text-align: center;
+  line-height: 24px;
+  color: #999;
+  @import './global-footer/index.less';
+}
+
+//返回顶部
+.global-widget{
+  width: 48px;
+  border: 1px solid #e9e9e9;
+  font-size: 12px;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  margin-left: 535px;
+  bottom: 10px;
+  z-index: 99;
+  .feed-back,.back-top{
+    display: block;
+    font-family: 'cms';
+    color: #666;
+    background-color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 40px;
+    height: 48px;
+    cursor: pointer;
+    position: relative;
+  }
+  .feed-back:after,.back-top:after{
+    width: 48px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: 'Microsoft YaHei';
+  }
+  .feed-back{
+    text-align: center;
+    text-decoration: none;
+    &:after{
+      content: '\53cd\9988';
+    }
+    &:hover{
+      color: #ff6600;
+      line-height: 40px;
+      &:after{
+        color: #ff6600;
+        line-height: 20px;
+      }
+    }
+  }
+  .back-top{
+    color: #999;
+    border-top: 1px solid #e9e9e9;
+    display: none;
+    &:hover{
+      color: #ff6600;
+      line-height: 40px;
+      &:after{
+        color: #ff6600;
+        line-height: 20px;
+      }
+    }
+    &:after{
+      content: '\9876\90e8';
+    }
+  }
+}
+
+
+
+
+

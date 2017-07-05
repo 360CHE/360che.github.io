@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Global Footer';
+  src: url('//at.alicdn.com/t/font_pvadcl3336dpldi.eot');
+  src: url('//at.alicdn.com/t/font_pvadcl3336dpldi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_pvadcl3336dpldi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_pvadcl3336dpldi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_pvadcl3336dpldi.svg#iconfont') format('svg');
+}
+.links{
+  position: relative;
+  margin-top: 10px;
+  *zoom: 1;
+  a{
+    margin: 0 10px;
+    color:#999;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      color: #d60000;
+    }
+    &::before{
+      font-family: "Global Footer";
+      font-size: 14px;
+    }
+    &.iphone::before{
+      content: "\e673";
+    }
+    &.android::before{
+      content: "\e602";
+    }
+    &.promotion{
+      color: #d60000
+    }
+  }
+  .share{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 24px;
+    line-height: 24px;
+    .share-tools-360che{
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 0;
+      width: auto;
+      white-space: nowrap;
+      a,span{
+        margin: 0 0 0 10px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0;
+      }
+    }
+    #page_qrcode{
+      top: -60px;
+      left:110px;
+    }
+  }
+}
+.copyright{
+  a{
+    margin: 0 10px;
+    color:#999;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      color: #d60000;
+    }
+  }
+}

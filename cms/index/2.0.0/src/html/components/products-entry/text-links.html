@@ -1,0 +1,33 @@
+<ul id="products_hot" class="visible">
+    <% for(var j = 0; j < 4; j++) {%>
+        <li>
+            <a href="" class="more">更多</a>
+            <div class="caption"><a href="">轻卡报价1</a></div>
+            <% for(var i = 0; i < 7; i++) {%>
+                <% include ./text-links/text.html %>
+                    <% } %>
+        </li>
+        <% } %>
+</ul>
+<ul id="products_default">
+    <% for(var j = 0; j < 4; j++) {%>
+        <li>
+            <a href="" class="more">更多</a>
+            <div class="caption"><a href="">轻卡报价2</a></div>
+            <% for(var i = 0; i < 7; i++) {%>
+                <% include ./text-links/text.html %>
+                    <% } %>
+        </li>
+        <% } %>
+</ul>
+<ul id="products_other">
+    <% for(var j = 0; j < 4; j++) {%>
+        <li>
+            <a href="" class="more">更多</a>
+            <div class="caption"><a href="">轻卡报价3</a></div>
+            <% for(var i = 0; i < 7; i++) {%>
+                <% include ./text-links/text.html %>
+                    <% } %>
+        </li>
+        <% } %>
+</ul>
